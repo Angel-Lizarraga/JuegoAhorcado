@@ -14,4 +14,12 @@ public class PalabraSecreta {
     public PalabraSecreta(String palabra){
         this.palabra = palabra; 
     }
+    
+    public String getPalabra(){
+        return palabra;
+    }
+    public void setPalabra(String p){
+        palabra = p;
+    }
+    }
 }
