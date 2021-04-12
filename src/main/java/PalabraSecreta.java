@@ -9,5 +9,9 @@
  * @author Lenovo
  */
 public class PalabraSecreta {
+    private String palabra;
     
+    public PalabraSecreta(String palabra){
+        this.palabra = palabra; 
+    }
 }
