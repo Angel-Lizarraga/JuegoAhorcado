@@ -10,5 +10,8 @@
  */
 public class ControlJuego {
     private String mensaje = "Hola Alex";
+    public void Testing(){
+        System.out.println("Hola Angel");
+    }
     
 }
