@@ -85,11 +85,15 @@ public class ControlJuego {
 }
     
     public char compararLetra(){
-    
+        
     }
     
     public String compararPalabra(){
     
+    }
+    public void generarPalabra(){
+        
+        
     }
 }
     
