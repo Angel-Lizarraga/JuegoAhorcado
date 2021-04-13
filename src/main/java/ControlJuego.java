@@ -1,7 +1,5 @@
+import java.util.ArrayList
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  */
 
 /**
@@ -9,9 +7,88 @@
  * @author Lenovo
  */
 public class ControlJuego {
-    private String mensaje = "Hola Alex";
-    public void Testing(){
-        System.out.println("Hola Angel");
+    private ArrayList<PalabraSecreta> palabras;
+    private PalabraSecreta palabraSeleccionada;
+    private boolean palabraAdivinada;
+    private int intentoFallido = 0;
+    private boolean juegoIniciado;
+    
+    public ControlJuego(){
+    intentoFallido = 0;
+    palabraAdivinada = false;
+    juegoIniciado = false;
     }
     
+    public void inicializarJuego(){
+    intentoFallido = 0;
+    palabraAdivinada = false;
+    juegoIniciado = true;
+    }
+    
+    public void reiniciarJuego(){
+    inicializarJuego();
+    }
+
+    public void hayGanador(){
+        if(palabraAdivinada == true){
+            System.out.println("¡Felicidades, has adivinado la palabra!"):
+        }else if(intentoFallido == 6){
+            System.out.printlm("Has perdido.");
+        }
+    }
+
+    public void dibujarAhorcado(){
+        switch intentoFallido
+            case 1: System.out.println("    ______");
+                    System.out.println("   |     |");
+                    System.out.println("   |     O"  );
+                    System.out.println("   |        ");
+                    System.out.println("   |        ");
+                    System.out.println("___|________");
+                    break;
+            case 2: System.out.println("    ______");
+                    System.out.println("   |     |");
+                    System.out.println("   |     O");
+                    System.out.println("   |     | ");
+                    System.out.println("   |      ");
+                    System.out.println("___|________");
+                    break;  
+            case 3: System.out.println("    ______");
+                    System.out.println("   |     |");
+                    System.out.println("   |     O");
+                    System.out.println("   |    /| ");
+                    System.out.println("   |        );
+                    System.out.println("___|________");
+                    break;
+            case 4: System.out.println("    ______");
+                    System.out.println("   |     |");
+                    System.out.println("   |     O");
+                    System.out.println("   |    /|\ ");
+                    System.out.println("   |        ");
+                    System.out.println("___|________");
+                    break;
+            case 5: System.out.println("    ______");
+                    System.out.println("   |     |");
+                    System.out.println("   |     O");
+                    System.out.println("   |    /|\ ");
+                    System.out.println("   |    /  ");
+                    System.out.println("___|________");
+                    break;
+            case 6: System.out.println("    ______");
+                    System.out.println("   |     |");
+                    System.out.println("   |     O");
+                    System.out.println("   |    /|\ ");
+                    System.out.println("   |    / \");
+                    System.out.println("___|________");
+                    break;
 }
+    
+    public char compararLetra(){
+    
+    }
+    
+    public String compararPalabra(){
+    
+    }
+    
+    
