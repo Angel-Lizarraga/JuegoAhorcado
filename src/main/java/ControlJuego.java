@@ -9,5 +9,6 @@
  * @author Lenovo
  */
 public class ControlJuego {
+    private String mensaje = "Hola Alex";
     
 }
