@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 /*
  */
 
@@ -8,7 +9,9 @@ import java.util.ArrayList;
  */
 public class ControlJuego {
     private ArrayList<PalabraSecreta> palabras;
+    private String[] listaPalabras = {"Javier","Javier","pescado","Valeria","Probando"};
     private PalabraSecreta palabraSeleccionada;
+    private Jugador elJugador;
     private boolean palabraAdivinada;
     private int intentoFallido = 0;
     private boolean juegoIniciado;
@@ -17,6 +20,8 @@ public class ControlJuego {
     intentoFallido = 0;
     palabraAdivinada = false;
     juegoIniciado = false;
+    palabraSeleccionada = new PalabraSecreta(generarPalabra());
+    elJugador = new Jugador();
     }
     
     public void inicializarJuego(){
@@ -89,10 +94,16 @@ public class ControlJuego {
     }
     
     public String compararPalabra(){
-    
-    }
-    public void generarPalabra(){
+        String palabraJugador = elJugador.ingresarPalabra();
         
+    }
+    public String generarPalabra(){
+        Random ale = new Random();
+        int select = ale.nextInt(listaPalabras.length);
+        String palabra = listaPalabras[select];
+        String palabraUpper = palabra.toUpperCase();
+        
+        return palabraUpper;
         
     }
 }
